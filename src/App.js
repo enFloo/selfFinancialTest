@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Stars from './components/Stars';
+import ReviewBox from './components/ReviewBox';
+import SubmitButton from './components/SubmitButton';
+import NPSScore from './components/NPSSCORE';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Header/>
+      <div style={{display: "flex", flexDirection:'column'}}>
+        <Stars/>
+        <ReviewBox/>
+        <div style={{display:"flex"}}>
+          <NPSScore/>
+          <SubmitButton/>
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default App;
