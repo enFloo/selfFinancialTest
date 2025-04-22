@@ -28,12 +28,12 @@ const Stars = () =>{
                             key={i}
                             size={22}
                             style={{marginRight: ".5em"}}
-                            color={(rating) > i ? "#CF2AFF" : "#D3D3D3"}
+                            color={(hoverValue || rating) > i ? "#CF2AFF" : "#D3D3D3"}
                             onChange={(e) => setRating(e.target.value)}
                             value={rating}
                             onMouseOver={() => handleMouseOverStar(i+1)}
                             onClick={() => handleClickStar(i+1)}
-                            onMouseLeave={() => handleMouseLeaveStar}
+                            onMouseLeave={() => handleMouseLeaveStar()}
                         />
                         )}
                     )
