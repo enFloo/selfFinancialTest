@@ -1,10 +1,18 @@
 import StyledButton from '../components/styled/styledButton.styled';
+import Stars from './Stars';
 
 const SubmitButton = () =>{
 
+    const onSubmit = (rating) =>{
+        console.log("Hello")
+    }
+    
+
     return(
-        <div style={{flex:"4", marginLeft:"0%"}}>
-            <StyledButton>SUBMIT</StyledButton>
+        <div style={{flex:"4"}}>
+            <StyledButton
+            onClick={() => onSubmit()}
+            >SUBMIT</StyledButton>
         </div>
     )
     

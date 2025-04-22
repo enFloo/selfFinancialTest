@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa';
+
+
 
 const Stars = () =>{
     let count = 10;
-    const [rating, setRating] = useState(0)
-    const [hoverValue, setHoverValue] = useState(undefined)
+    const [hoverValue, setHoverValue] = useState(undefined);
+    const [rating, setRating] = useState(0);
 
     const handleMouseOverStar = value =>{
         setHoverValue(value);
